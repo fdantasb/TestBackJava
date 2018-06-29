@@ -1,4 +1,4 @@
-package br.com.fdantasb.TestBackJava;
+package br.com.fdantasb;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

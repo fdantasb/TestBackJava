@@ -1,4 +1,4 @@
-package br.com.fdantasb.TestBackJava;
+package br.com.fdantasb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

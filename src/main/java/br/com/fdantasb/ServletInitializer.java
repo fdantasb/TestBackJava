@@ -1,4 +1,4 @@
-package br.com.fdantasb.TestBackJava;
+package br.com.fdantasb;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
