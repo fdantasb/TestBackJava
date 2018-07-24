@@ -1,5 +1,7 @@
 package br.com.fdantasb.domain;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,6 +29,10 @@ public class Gasto implements Serializable {
     }
 
     public void setDescricao(String descricao) {
+        if (StringUtils.isBlank(descricao)) {
+            throw new IllegalArgumentException("A descrição não pode ser nula ou vazia.");
+        }
+
         this.descricao = descricao;
     }
 
