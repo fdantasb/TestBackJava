@@ -37,4 +37,14 @@ public class GastoTest {
 
         assertNotNull(gasto.getData());
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void valorNegativo(){
+        Double negativo = new Double(-150);
+
+        Gasto gasto = new Gasto();
+        gasto.setValor(negativo);
+    }
+
+    
 }
