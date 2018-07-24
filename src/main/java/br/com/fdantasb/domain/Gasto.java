@@ -1,6 +1,7 @@
 package br.com.fdantasb.domain;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Gasto implements Serializable {
@@ -42,6 +43,10 @@ public class Gasto implements Serializable {
     }
 
     public void setData(Date data) {
+        Date currentDate = Calendar.getInstance().getTime();
+        if (currentDate.before(data)) {
+            throw new IllegalArgumentException("A data informada não pode ser futura");
+        }
         this.data = data;
     }
 }
