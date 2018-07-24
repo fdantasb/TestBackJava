@@ -23,7 +23,18 @@ public class GastoTest {
         Gasto gasto = new Gasto();
 
         gasto.setData(dataFutura.getTime());
+    }
 
+    @Test
+    public void dataPassada(){
 
+        Calendar calendar = Calendar.getInstance();
+        int mes = calendar.get(Calendar.MONTH);
+        calendar.set(Calendar.MONDAY, mes-1);
+
+        Gasto gasto = new Gasto();
+        gasto.setData(calendar.getTime());
+
+        assertNotNull(gasto.getData());
     }
 }
