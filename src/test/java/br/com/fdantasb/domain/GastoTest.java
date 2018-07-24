@@ -46,5 +46,15 @@ public class GastoTest {
         gasto.setValor(negativo);
     }
 
-    
+    @Test(expected = IllegalArgumentException.class)
+    public void dataNula(){
+        Gasto gasto = new Gasto();
+        gasto.setDescricao(null);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void dataVazia(){
+        Gasto gasto = new Gasto();
+        gasto.setDescricao("");
+    }
 }
