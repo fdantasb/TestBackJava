@@ -35,6 +35,10 @@ public class Gasto implements Serializable {
     }
 
     public void setValor(Double valor) {
+        if (valor <= 0) {
+            throw new IllegalArgumentException("O valor do gasto não pode ser igual ou inferior a zero.");
+        }
+
         this.valor = valor;
     }
 
